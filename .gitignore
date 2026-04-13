@@ -1,14 +1,7 @@
 ```
 # Compressed archives
-*.tar.gz
-*.zip
-*.gz
 *.tar
 *.tgz
-*.bz2
-*.xz
-*.7z
-*.rar
 *.zst
 *.lz4
 *.lzh
@@ -19,7 +12,5 @@
 *.Z
 *.lz
 *.lzo
-*.tar.bz2
-*.tar.xz
 *.tar.zst
 ```
