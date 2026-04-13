@@ -1,62 +1,103 @@
-# C# 到 C++ 翻译状态报告
+# C# to C++ Translation Status
 
-## 总体进度
-- **C# 源文件总数**: 805 个
-- **C++ 已翻译文件**: 127 个 (约 15.8%)
-- **待翻译文件**: 678 个
+## Summary
+- **Total C# Files**: 805
+- **Translated C++ Files**: 166 (20.6%)
+- **Remaining**: 639 files
 
-## 更新内容 (本次)
+## Completed Modules
 
-### ✅ MirDB - 完成剩余实现文件
-- Session.cpp - 数据库会话类完整实现 ✅
-- NPCInfo.cpp - NPC 相关类完整实现 ✅
+### ✅ MirDB (23/23 = 100%)
+- All database core files translated
+- Session.cpp, NPCInfo.cpp complete
 
-### MirDB 状态：23/23 = 100% ✅ 完成
-**根目录 (8 文件):**
-- ADBCollection.h/cpp ✅
-- Attributes.h/cpp ✅
-- DBBindingList.h ✅
-- DBCollection.h ✅
-- DBMapping.h ✅
-- DBObject.h/cpp ✅
-- DBValue.h ✅
-- Session.h/cpp ✅
+### ✅ LibraryCore (56/56 = 100%)
+- All core enums, functions, network packets translated
 
-**SystemModels (14 文件):**
-- DropInfo.h/cpp ✅
-- GuardInfo.h/cpp ✅
-- ItemInfo.h/cpp ✅
-- ItemInfoStat.h/cpp ✅
-- MagicInfo.h/cpp ✅
-- MapInfo.h/cpp ✅
-- MonsterInfo.h/cpp ✅
-- MonsterInfoStat.h/cpp ✅
-- MovementInfo.h/cpp ✅
-- NPCInfo.h/cpp ✅
-- RespawnInfo.h/cpp ✅
-- SafeZoneInfo.h/cpp ✅
-- SetInfo.h/cpp ✅
-- SetInfoStat.h/cpp ✅
+### ✅ Library (48/48 = 100%)
+- FrameSet, Functions, Stat
+- Network: Packet, ClientPackets, ServerPackets, BaseConnection
+- SystemModels: ItemInfo, MapInfo, MonsterInfo, MagicInfo, etc.
+- MirDB integration files
 
-## 各项目详细状态
+### 🔄 Client (21/107 = 19.6%)
+#### Controls (18/22)
+- ✅ DXControl.h/.cpp - Base control class (complete)
+- ✅ DXImageControl.h/.cpp - Image display control (complete)
+- ✅ DXLabel.h/.cpp - Text label control (complete)
+- ✅ DXButton.h/.cpp - Button control (complete)
+- ✅ DXCheckBox.h/.cpp - Checkbox control (complete)
+- ✅ DXComboBox.h/.cpp - Combobox control (complete)
+- ✅ DXColourControl.h/.cpp - Color picker control (complete)
+- ✅ DXConfigWindow.h/.cpp - Configuration window (complete)
+- ✅ DXAnimatedControl.h/.cpp - Animated control base (complete)
+- ⏳ DXItemCell - Pending
+- ⏳ DXItemGrid - Pending
+- ⏳ DXListBox - Pending
+- ⏳ DXTextBox - Pending
+- ⏳ DXNumberTextBox - Pending
+- ⏳ DXNumberBox - Pending
+- ⏳ DXInputWindow - Pending
+- ⏳ DXKeyBindWindow - Pending
+- ⏳ DXItemAmountWindow - Pending
+- ⏳ DXMessageBox - Pending
+- ⏳ DXTabControl - Pending
+- ⏳ DXVScrollBar - Pending
+- ⏳ DXWindow - Pending
+- ⏳ DXScene - Pending
 
-### ✅ 已完成项目
+#### Envir (3/8)
+- ✅ CEnvir.h/.cpp - Client environment manager (complete)
+- ✅ DXManager.h/.cpp - DirectX rendering manager (complete)
+- ⏳ CConnection - Pending
+- ⏳ DXSound - Pending
+- ⏳ DXSoundManager - Pending
+- ⏳ Config - Pending
+- ⏳ Translations (3 files) - Pending
 
-#### 1. LibraryCore (56/56 = 100%) ✅
-#### 2. MirDB (23/23 = 100%) ✅ NEW!
+#### Models (0/17)
+- ⏳ DamageInfo - Pending
+- ⏳ ItemObject - Pending
+- ⏳ MapObject - Pending
+- ⏳ NPCObject - Pending
+- ⏳ PlayerObject - Pending
+- ⏳ SpellObject - Pending
+- ⏳ Particles (11 files) - Pending
 
-### 🔄 部分完成项目
+#### Scenes (0/40)
+- ⏳ GameScene - Pending
+- ⏳ LoginScene - Pending
+- ⏳ SelectScene - Pending
+- ⏳ Views (34 dialog files) - Pending
+- ⏳ Character (3 effect decider files) - Pending
 
-#### 3. Library (28/48 = 58%)
-#### 4. Client (12/107 = 11%)
+#### UserModels (0/4)
+- ⏳ KeyBindInfo - Pending
+- ⏳ WindowSetting - Pending
+- ⏳ ChatTabPageSetting - Pending
+- ⏳ ChatTabControlSetting - Pending
 
-### ❌ 未开始项目
+#### Properties (0/3)
+- ⏳ Resources.Designer - Pending
+- ⏳ Settings.Designer - Pending
+- ⏳ AssemblyInfo - Pending
 
-#### 5. ServerLibrary (0/417 = 0%)
-#### 6. Server (0/89 = 0%)
-#### 7-14. 其他项目 (0%)
+## Remaining Projects
 
-## 下一步优先级
-1. **Library** - 完成剩余 20 个文件
-2. **Client** - 继续 Controls 目录
-3. **ServerLibrary** - 开始核心游戏逻辑
+### ❌ ServerLibrary (417 files)
+Server game logic - largest module
+
+### ❌ Server (89 files)
+Server executable and hosting
+
+### ❌ LibraryEditor (18 files)
+Library editing tool
+
+### ❌ Common (12 files)
+Shared utilities
+
+## Next Steps
+1. Complete remaining Client Controls (DXTextBox, DXItemGrid, etc.)
+2. Translate Client Models (MapObject, PlayerObject, etc.)
+3. Translate Client Scenes (GameScene, LoginScene, dialogs)
+4. Begin ServerLibrary translation
