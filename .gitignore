@@ -1,9 +1,38 @@
-.idea/*
-*.user
-Build/
+```
+# Build artifacts
+*.obj
+*.exe
+*.dll
+*.lib
+*.so
+*.dylib
+*.a
+
+# Debug and release builds
+Debug/
+Release/
+x64/
+x86/
+build/
+dist/
+
+# Dependencies
+vendor/
+external/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# IDE specific
 .vs/
-[Oo]bj/
-[Bb]in/
-packages/
-licenses.licx
-/NuGet.Config
+.vcxproj.user
+```
