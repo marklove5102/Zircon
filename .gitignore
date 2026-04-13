@@ -7,6 +7,8 @@
 *.so
 *.a
 *.out
+build/
+dist/
 
 # Dependencies
 venv/
@@ -16,20 +18,10 @@ __pycache__/
 .pytest_cache/
 node_modules/
 
-# Build directories
-build/
-dist/
-target/
-
 # Logs and temp files
 *.log
 *.tmp
 *.swp
-
-# Environment files
-.env
-.env.local
-*.env.*
 
 # Editors
 .vscode/
@@ -38,6 +30,9 @@ target/
 # System files
 .DS_Store
 Thumbs.db
+.env
+.env.local
+*.env.*
 
 # Coverage
 coverage/
