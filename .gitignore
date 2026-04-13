@@ -1,3 +1,59 @@
-Nothing should be ignored in this case, as the changes consist only of C++ source files (.cpp, .h) which are core project files that should be tracked in version control. There are no build artifacts, dependencies, temporary files, or other items that need to be ignored.
+```
+# Build artifacts
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+*.out
 
-Output: (empty)
+# Dependencies
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+node_modules/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+
+# Logs
+*.log
+
+# Coverage reports
+coverage/
+htmlcov/
+.coverage
+
+# Environment files
+.env
+.env.local
+*.env.*
+
+# Distribution files
+dist/
+build/
+target/
+*.tar.gz
+*.zip
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# C++ specific
+*.ilk
+*.pdb
+*.sdf
+*.suo
+Debug/
+Release/
+x64/
+```
