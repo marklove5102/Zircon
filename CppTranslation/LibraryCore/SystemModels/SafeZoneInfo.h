@@ -1,0 +1,98 @@
+#pragma once
+#include <cstdint>
+#include <string>
+#include <vector>
+#include <map>
+#include <memory>
+
+namespace Library
+{
+
+
+
+
+namespace Library.SystemModels
+{
+    class SafeZoneInfo : DBObject
+    {
+        [IsIdentity]
+        public MapRegion Region
+        {
+            get { return _Region; }
+            set
+            {
+                if (_Region == value) return;
+
+                var oldValue = _Region;
+                _Region = value;
+
+                OnChanged(oldValue, value, "Region");
+};
+};
+        private MapRegion _Region;
+        
+        public MapRegion BindRegion
+        {
+            get { return _BindRegion; }
+            set
+            {
+                if (_BindRegion == value) return;
+
+                var oldValue = _BindRegion;
+                _BindRegion = value;
+
+                OnChanged(oldValue, value, "BindRegion");
+};
+};
+        private MapRegion _BindRegion;
+        
+        public RequiredClass StartClass
+        {
+            get { return _StartClass; }
+            set
+            {
+                if (_StartClass == value) return;
+
+                var oldValue = _StartClass;
+                _StartClass = value;
+
+                OnChanged(oldValue, value, "StartClass");
+};
+};
+        private RequiredClass _StartClass;
+
+        public bool RedZone
+        {
+            get { return _RedZone; }
+            set
+            {
+                if (_RedZone == value) return;
+
+                var oldValue = _RedZone;
+                _RedZone = value;
+
+                OnChanged(oldValue, value, "RedZone");
+};
+};
+        private bool _RedZone;
+
+        public bool Border
+        {
+            get { return _Border; }
+            set
+            {
+                if (_Border == value) return;
+
+                var oldValue = _Border;
+                _Border = value;
+
+                OnChanged(oldValue, value, "Border");
+};
+};
+        private bool _Border;
+
+        public std::vector<Point> ValidBindPoints = new std::vector<Point>();
+};
+};
+
+}
