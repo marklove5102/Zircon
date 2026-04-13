@@ -1,5 +1,5 @@
 ```
-# Compiled and build artifacts
+# Compiled files
 *.o
 *.obj
 *.exe
@@ -8,25 +8,19 @@
 *.a
 *.out
 
+# Build artifacts
+build/
+dist/
+
 # Dependencies
+node_modules/
 venv/
 .venv/
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.class
-
-# Build directories
-build/
-dist/
+.mypy_cache/
+.pytest_cache/
 target/
-
-# Logs and temp files
-*.log
-*.tmp
-*.swp
-*.swo
+.gradle/
 
 # Environment
 .env
@@ -36,13 +30,19 @@ target/
 # Editors
 .vscode/
 .idea/
+*.swp
+*.swo
+*.tmp
+
+# Logs
+*.log
 
 # Coverage
 coverage/
 htmlcov/
 .coverage
 
-# OS generated files
+# System
 .DS_Store
 Thumbs.db
 ```
