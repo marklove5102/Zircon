@@ -1,4 +1,59 @@
 ```
-# Compressed files
-*.tar.gz
+# Build artifacts
+build/
+dist/
+
+# Dependencies
+.venv/
+venv/
+node_modules/
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.local
+*.env.*
+
+# Compiled files
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+*.out
+
+# Python specific
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Mypy_cache/
+.pytest_cache/
+.coverage
+coverage/
+htmlcov/
+
+# C++ specific
+*.i
+*.ii
+*.s
+*.su
+*.sln
+*.vcxproj
+*.vcproj
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# System files
+.DS_Store
+Thumbs.db
 ```
